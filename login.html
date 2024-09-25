@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a project for managing and displaying events, including an admin dashboard for adding and editing events.">
+    <meta name="keywords" content="events, event management, admin dashboard, add events, edit events">
+    <link rel="icon" href="" type="image/x-icon">
+    <!-- Boxicons link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Login Admin</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f4f8;
+        }
+
+        .wrapper {
+            width: 450px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .wrapper h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 26px;
+            color: #007bff;
+        }
+
+        .wrapper .input-box {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input-box i {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            color: #007bff;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px 45px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background-color: #fafafa;
+        }
+
+        .input-box input:focus {
+            border-color: #007bff;
+            background-color: #eaf4ff;
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .remember-forgot a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .register-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        
+
+
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h2>Login</h2>
+
+            <div class="input-box">
+                <i class='bx bx-user'></i>
+                <input type="text" placeholder="Username" required>
+
+                
+            </div>
+
+            <div class="input-box">
+                <i class='bx bx-lock-alt'></i>
+                <input type="password" placeholder="password" required>
+                
+            </div>
+
+            <div class="remember-forgot">
+
+                <div class="remember-filed">
+                    <input type="checkbox">
+                    <label >Remember Me</label>
+                </div>
+                    
+                <a href="#">Forgot password ?</a>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+            
+            <div class="register-link">
+                <p>Dont have an account ?
+                    <a href="register.html" onclick="register()">Register</a>
+                </p>
+            </div>
+
+        </form>
+    </div>
+    
+</body>
+</html>
