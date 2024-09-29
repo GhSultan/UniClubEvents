@@ -1,11 +1,7 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Oleo+Script:400|Open+Sans:300,300italic,600,600italic,800");
 
-/*
-	Verti by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -1511,7 +1507,7 @@ input, select, textarea {
 		form input[type="password"]:focus,
 		form select:focus,
 		form textarea:focus {
-			border-color: #0090c5;
+			border-color: #3c84ff;
 		}
 
 	form input[type="text"],
@@ -1634,7 +1630,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
-		background: #0090c5;
+		background: #3c84ff;
 		color: #fff;
 		text-decoration: none;
 		border-radius: 6px;
@@ -1957,6 +1953,7 @@ input, select, textarea {
 			font-size: 0.9em;
 			vertical-align: middle;
 			margin: 0 0 0 1.25em;
+			color: #0090c5;
 		}
 
 /* Nav */
@@ -2685,4 +2682,60 @@ input, select, textarea {
 				text-align: left;
 			}
 
+	}
+
+	/* coment */
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: Arial, sans-serif;
+		background-color: #f0f0f0;
+		height: 100%; /* Ensure the body takes the full height of the viewport */
+		overflow: auto; /* Allow scrolling if content overflows the viewport */
+	}
+	.scroll-container {
+		width: 100%;
+		overflow: hidden;
+		background-color: #3c84ff;
+		color: white;
+		padding: 100px 0;
+		position: relative;
+	}
+	
+	.scroll-content {
+		display: flex;
+		white-space: nowrap;
+		will-change: transform;
+		animation: scroll 10s linear infinite;
+	}
+	
+	.scroll-content span {
+		display: inline-block;
+		padding: 0 50px;
+		font-size: 50px;
+		text-transform: uppercase;
+	}
+	
+	@keyframes scroll {
+		from {
+			transform: translateX(100%);
+		}
+		to {
+			transform: translateX(-100%);
+		}
+	}
+	/* about us  */
+	.more-text {
+		display: none;
+	}
+
+	.read-more-btn {
+		color: #007BFF;
+		cursor: pointer;
+		display: inline-block;
+		margin-top: 10px;
+	}
+
+	.read-more-btn:hover {
+		text-decoration: underline;
 	}

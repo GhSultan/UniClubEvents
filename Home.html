@@ -16,14 +16,14 @@
 
 						<!-- Logo -->
 							<div id="logo">
-								<h1><a href="index.html">Events</a></h1>
+								<h1><a href="Home.html">Events</a></h1>
 								<span>UniClubs Hub </span>
 							</div>
 
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
-									<li class="current"><a href="index.html">Home</a></li>
+									<li class="current"><a href="Home.html">Home</a></li>
 									<li>
 										<a href="#">Events</a>
 										<ul>
@@ -35,7 +35,7 @@
 									</li>
 									<li><a href="Competitions.html">Competitions</a></li>
 									<li><a href="Conferences.html">Conferences</a></li>
-									<li><a href="no-sidebar.html"></a></li>
+									
 								</ul>
 							</nav>
 
@@ -53,7 +53,7 @@
 							<div class="col-5 col-12-medium">
 								<ul>
 									<li><a href="#" class="button large icon solid fa-arrow-circle-right">Register now</a></li>
-									<li><a href="#" class="button alt large icon solid fa-question-circle">More info</a></li>
+									<li><a href="content" class="button alt large icon solid fa-question-circle">More info</a></li>
 								</ul>
 							</div>
 						</div>
@@ -113,6 +113,23 @@
 					</div>
 				</div>
 
+                <section class="box feature">
+
+                    <div class="carousel" id="carousel">
+                        <div class="carousel-inner">
+                           
+                            <div class="scroll-container">
+								<div class="scroll-content">
+									<span>The Uni Clubs Hub is a great place to organize student activities. </span>
+									<span>The website interface is simple but effective. </span>
+									<span>It makes communicating and joining so much easier.</span>
+								</div>
+							</div>
+                          
+                        </div>
+                      
+                </section>
+
 			<!-- Main -->
 				<div id="main-wrapper">
 					<div class="container">
@@ -131,7 +148,7 @@
 													<div class="col-6"><a href="#" class="image fit"><img src="images/p7.jpg" alt="" /></a></div>
 												</div>
 											</div>
-											<a href="#" class="button icon fa-file-alt">More</a>
+											<a href="photo.html" class="button icon fa-file-alt">More</a>
 										</section>
 									</div>
 
@@ -142,8 +159,17 @@
 									<div id="content">
 										<section class="last">
 											<h2>About us</h2>
-											<p>Uni Clubs Hub It is a comprehensive event management system for university student clubs, allowing clubs to easily create, manage and promote events, and providing students with a seamless platform to explore events, register and participate in various activities on campus. With user and administrator functions, it makes it easy to organize events, enhancing student engagement and increasing the visibility of student activities on campus.</p>
-											<a href="#" class="button icon solid fa-arrow-circle-right">Continue Reading</a>
+											<p>
+												Uni Clubs Hub It is a comprehensive event management system for university student clubs, allowing clubs to easily create, manage and promote events,													and providing students with a seamless platform to explore events, register and participate in various activities on campus. With user and administrator functions, it makes it easy to organize events, enhancing student engagement and increasing the visibility of student activities on campus.
+
+ 
+												<span class="more-text">
+													Easily explore events: They can browse all the events available on campus and focus on their specific interests.
+Quick registration: Registration for events is organized with the click of a button, with reminders about planning and variety.
+Availability of information: The university student can get all the details of the event such as location, time and activities available, which includes a complete understanding of what will be offered.
+												</span>
+											</p>		
+													<span href="#" class="button icon solid fa-arrow-circle-right" onclick="toggleText()">Continue Reading</span>
 										</section>
 									</div>
 
@@ -241,6 +267,41 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+            <script>
+               
+               const scrollContainer = document.querySelector('.scroll-content');
+const containerWidth = scrollContainer.scrollWidth;
+const viewportWidth = window.innerWidth;
+let scrollSpeed = 150; // speed in seconds
 
+function setScrollSpeed() {
+    const newSpeed = containerWidth / scrollSpeed;
+    scrollContainer.style.animationDuration = `${newSpeed}s`;
+}
+
+window.addEventListener('resize', () => {
+    setScrollSpeed();
+});
+
+// Initial call to set the scroll speed based on content width
+setScrollSpeed();
+   
+
+
+//about us
+function toggleText() {
+        const moreText = document.querySelector('.more-text');
+        const readMoreBtn = document.querySelector('.read-more-btn');
+
+        if (moreText.style.display === "none") {
+            moreText.style.display = "inline";
+            readMoreBtn.textContent = "Read Less";
+        } else {
+            moreText.style.display = "none";
+            readMoreBtn.textContent = "Read More";
+        }
+    }
+              </script>
+              
 	</body>
 </html>
